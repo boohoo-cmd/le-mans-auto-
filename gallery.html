@@ -1,0 +1,29 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,800;1,900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"><title>Gallery | Le Mans Auto Works</title></head><body>
+<div class="flag" aria-hidden="true"></div>
+<header class="wrap"><nav>
+<a class="logo d" href="index.html">Le Mans <b>Auto Works</b></a>
+<div class="links"><a href="index.html">Home</a><a href="gallery.html" aria-current="page">Gallery</a><a href="story.html">Story</a><a class="btn wa" href="https://wa.me/256708898912?text=Hi%20Le%20Mans%2C%20I%27d%20like%20to%20book%20a%20service.">WhatsApp</a></div>
+</nav></header>
+<main><div class="wrap" style="padding-top:40px;padding-bottom:56px">
+<h1 class="d" style="font-size:clamp(48px,10vw,96px);margin:0 0 16px">The <span style="color:var(--red)">work</span></h1>
+<p class="lead">Cars in, cars out. Real jobs from the garage floor.</p>
+<div class="filters" role="group" aria-label="Filter gallery">
+<button aria-pressed="true" data-f="all">All</button><button aria-pressed="false" data-f="repairs">Repairs</button><button aria-pressed="false" data-f="tuning">Tuning</button><button aria-pressed="false" data-f="team">The team</button>
+</div>
+<!-- To add photos: drop files in /images and match the names below. Placeholders show until the file exists. -->
+<div class="gal">
+<figure class="tile" data-c="repairs"><img src="images/work-1.jpg" alt="Repair in progress at Le Mans Auto Works" loading="lazy" onerror="this.remove()"><figcaption>Repair job [add caption]</figcaption></figure>
+<figure class="tile" data-c="tuning"><img src="images/work-2.jpg" alt="Tuned car" loading="lazy" onerror="this.remove()"><figcaption>Tuning [add caption]</figcaption></figure>
+<figure class="tile" data-c="team"><img src="images/team-1.jpg" alt="The Le Mans team" loading="lazy" onerror="this.remove()"><figcaption>The team [add caption]</figcaption></figure>
+<figure class="tile" data-c="repairs"><img src="images/work-3.jpg" alt="Wheel alignment" loading="lazy" onerror="this.remove()"><figcaption>Wheel alignment [add caption]</figcaption></figure>
+<figure class="tile" data-c="tuning"><img src="images/work-4.jpg" alt="Sports car in the garage" loading="lazy" onerror="this.remove()"><figcaption>In the garage [add caption]</figcaption></figure>
+<figure class="tile" data-c="team"><img src="images/team-2.jpg" alt="Mechanic at work" loading="lazy" onerror="this.remove()"><figcaption>At work [add caption]</figcaption></figure>
+</div>
+<p class="info" style="margin-top:28px">Want to see more? Follow <a href="https://www.tiktok.com/@lemansautoworks" style="color:var(--text)" rel="noopener">@lemansautoworks on TikTok</a>.</p>
+</div></main>
+<script>
+document.querySelectorAll('.filters button').forEach(function(b){b.addEventListener('click',function(){
+document.querySelectorAll('.filters button').forEach(function(x){x.setAttribute('aria-pressed',x===b)});
+document.querySelectorAll('.tile').forEach(function(t){t.hidden=!(b.dataset.f==='all'||t.dataset.c===b.dataset.f)})})});
+</script>
+<footer><div class="wrap">Le Mans Auto Works, Kampala. More than a garage, it&#39;s a vibe. Call +256 708 898 912</div></footer><a class="btn wa float" href="https://wa.me/256708898912" aria-label="Chat on WhatsApp">WhatsApp</a></body></html>
